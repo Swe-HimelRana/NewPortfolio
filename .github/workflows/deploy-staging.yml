@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Production Dependencies
-        run: npm install --production
+      - name: Install Dependencies
+        run: npm install
 
       - name: Build Next.js Application
         run: npm run build
