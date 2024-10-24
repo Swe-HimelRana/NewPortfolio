@@ -19,7 +19,7 @@ const NotFound: React.FC = () => {
                             </div>
                             <h1 className="mb-2 text-6xl font-bold text-gray-800">404</h1>
                             <p className="mb-4 text-2xl font-light text-gray-600">Page not found</p>
-                            <p className="mb-8 text-lg text-gray-500">Sorry, we couldn't find the page you're looking for.</p>
+                            <p className="mb-8 text-lg text-gray-500">Sorry, we could not find the page you are looking for.</p>
                             <Link href="/" className="mb-4 inline-block text-sm" prefetch={false}>
                                 <Button variant="default" className='bg-green-800 text-white dark:bg-zinc-900'>Go back home</Button>
                             </Link>
