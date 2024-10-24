@@ -32,20 +32,3 @@ jobs:
 
       - name: Staging Deployment Completed
         run: echo "Staging deployment complete visit https://stage.portfolio.himelrana.com"
-
-  create-pull-request:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Create Pull Request to Produciton
-        uses: peter-evans/create-pull-request@v4
-        with:
-          token: ${{ secrets.WORKFLOW_GITHUB_TOKEN }}
-          title: 'Merge staging into production'
-          body: 'Automated pull request to merge changes from staging to production.'
-          base: production
-          head: staging
-      - name: Created Marge Request to Production Carefull!
-        run: echo "Created marge request to production accept or reject it. Be carefull!"
