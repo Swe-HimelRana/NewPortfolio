@@ -1,0 +1,51 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install Production Dependencies
+        run: npm install --production
+
+      - name: Build Next.js Application
+        run: npm run build
+
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
+
+      - name: Deploy to Staging
+        run: |
+          sshpass -p "${{ secrets.CPanel_PASSWORD }}" rsync -avz --delete ./.next/ ${CPanel_USER}@${CPanel_HOST}:public_html/staging
+
+      - name: Staging Deployment Completed
+        run: echo "Staging deployment complete visit https://stage.portfolio.himelrana.com"
+
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request to Produciton
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.WORKFLOW_GITHUB_TOKEN }}
+          title: 'Merge staging into production'
+          body: 'Automated pull request to merge changes from staging to production.'
+          base: production
+          head: staging
+      - name: Created Marge Request to Production Carefull!
+        run: echo "Created marge request to production accept or reject it. Be carefull!"

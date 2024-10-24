@@ -9,7 +9,7 @@ const SocialLinks = () => {
   const links = [
     { name: "Facebook", link: "https://www.facebook.com/himelrana.SWE", icon: <Facebook /> },
     { name: "Twitter", link: "https://x.com/xhimelswe", icon: <Twitter /> },
-    { name: "Linkedin", link: "https://www.linkedin.com/bn/himelrana", icon: <Linkedin /> },
+    { name: "Linkedin", link: "https://www.linkedin.com/in/swe-himelrana", icon: <Linkedin /> },
     { name: "External", link: "https://mirror.himelrana.com", icon: <FcLinux style={{ fontSize: '50px' }} /> },
     { name: "External", link: "https://github.com/Swe-HimelRana", icon: <Github /> },
   ];
