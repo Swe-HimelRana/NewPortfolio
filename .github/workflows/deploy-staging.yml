@@ -28,7 +28,7 @@ jobs:
 
       - name: Deploy to Staging
         run: |
-          sshpass -p "${{ secrets.CPanel_PASSWORD }}" rsync -avz --delete ./.next/ ${CPanel_USER}@$103.213.38.117:public_html/staging
+          sshpass -p "${{ secrets.CPanel_PASSWORD }}" rsync -avz --delete ./.next/ ${{ secrets.CPanel_USER }}@$103.213.38.117:public_html/staging
 
       - name: Staging Deployment Completed
         run: echo "Staging deployment complete visit https://stage.portfolio.himelrana.com"
