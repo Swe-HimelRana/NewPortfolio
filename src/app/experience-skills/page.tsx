@@ -29,6 +29,8 @@ import linux from '../../../public/linux.jpg'
 import vuejs from '../../../public/vuejs.png'
 import cicd from '../../../public/cicd.png'
 import testing from '../../../public/testing.jpg'
+import { Card } from "@/components/ui/card";
+import BoxReveal from "@/components/ui/box-reveal";
 
 const skillPage = () => {
 
@@ -131,49 +133,59 @@ const skillPage = () => {
               <Lightbulb className="h-5 w-5" />
               My Skills
             </Badge>
+            <BoxReveal boxColor={"none"} duration={1}>
             <div className="flex flex-col gap-3">
               <Heading >My Technical Experience/Skills.</Heading>
-
-              <p className="font-poppins text-sm w-full ">
+              <Card className="p-2 ">
+              <p className="font-poppins text-sm w-full">
                 A dedicated web developer with over two years of industry experience and an additional year of teaching experience.
                 Skilled in building dynamic and responsive web applications, with a strong focus on delivering user-friendly and efficient solutions.
                 Committed to applying best practices in development and design to create engaging digital experiences.
                 Eager to contribute to innovative projects and collaborate with teams to achieve exceptional results.
               </p>
-
+              </Card>
 
               <h1 className=" text-2xl font-poppins text-primary font-semibold flex text_underline relative max-sm:text-xl">
                 Programming Languages
               </h1>
               <div className="w-[90%] h-fit flex-row flex-wrap flex  gap-3 px-4 items-center">
-                <div className="border shadow-lg border-gray-600 p-2 rounded">
+                <div className="rounded">
+                <Card className="p-2">
                   <SkillsFooter items={language} />
+
+                </Card>
                 </div>
 
 
               </div>
 
-
+              
               <h1 className="gap-2 text-2xl font-poppins text-primary font-semibold flex text_underline relative max-sm:text-xl">
                 Framework and Libraries
               </h1>
               <div className="w-[90%] h-fit flex-row flex-wrap flex  gap-3 px-4 items-center">
-                <div className="border shadow-lg border-gray-600 p-2 rounded">
+                <div className="rounded">
+                  <Card className="p-2">
                   <SkillsFooter items={framework} />
+                  </Card>
                 </div>
 
               </div>
+
               <h1 className="gap-2 text-2xl font-poppins text-primary font-semibold flex text_underline relative max-sm:text-xl">
                 Deployments
               </h1>
               <div className="w-[90%] h-fit flex-row flex-wrap flex  gap-3 px-4 items-center">
-                <div className="border shadow-lg border-gray-600 p-2 rounded">
+                <div className="rounded">
+                <Card className="p-2">
                   <SkillsFooter items={deployment} />
+                </Card>
                 </div>
 
               </div>
 
             </div>
+            </BoxReveal>
           </div>
         </div>
       </div>
