@@ -29,7 +29,7 @@ export default function Home() {
             <SocialLinks />
           </div>
         </div>
-        <Link href="/resume.pdf"><RainbowButton className="w-[250px] ml-6"><div className="flex"><Download className="mr-2"/> Download Resume</div></RainbowButton></Link>
+        <Link href="https://files.himelrana.com/profession/resume.pdf"><RainbowButton className="w-[250px] ml-6"><div className="flex"><Download className="mr-2"/> Download Resume</div></RainbowButton></Link>
         {/* <DownLoadResumeBtn /> */}
       </FramerWrapper>
       {/* CENTER */}
