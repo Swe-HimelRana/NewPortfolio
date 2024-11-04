@@ -31,7 +31,7 @@ export async function InfoBox() {
       <BoxReveal boxColor={"#0bb044"} duration={0.5}>
         <div className="mt-6">
           <p>
-            -&gt; I am other designation
+            -&gt; My other designations
             <span className="font-semibold text-blue-800 font-bold dark:text-[#0bb044]"> DevOps Engineer</span>,
             <span className="font-semibold text-blue-800 font-bold dark:text-[#0bb044]"> Cyber Security Expert</span>,
             and

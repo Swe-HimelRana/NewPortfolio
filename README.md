@@ -2,7 +2,7 @@
 
 This is my simple and Beautiful mobile friendly Porfolio made with Nextjs and Shadcn Ui.
 
-![Demo](https://himelrana.com/og-image.png)
+![demo](https://files.himelrana.com/portfolio/og-image.png)
 
 Or visit [https://himelrana.com](https://himelrana.com) with your browser to see the result.
 
